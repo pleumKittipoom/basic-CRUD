@@ -15,9 +15,10 @@ let productSchema = mongoose.Schema({
 // สร้าง Model จาก Schema ที่ออกแบบไว้
 let Product = mongoose.model("product", productSchema);
 
-// ส่งออก Model นี้เพื่อใช้งานในภายนอก
+// ส่งออก Model นี้เพื่อใช้งานในภายนอก 
 module.exports = Product;
 
+// ฟังก์ชันสำหรับบันทึกข้อมูลสินค้า
 module.exports.saveProduct = async function(model,data) {
     try {
         await model.save(data);
